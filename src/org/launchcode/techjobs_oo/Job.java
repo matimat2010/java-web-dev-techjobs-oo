@@ -58,18 +58,6 @@ public class Job {
         return id;
     }
 
-//    public void setId(int id) {
-//        this.id = id;
-//    }
-
-//    public static int getNextId() {
-//        return nextId;
-//    }
-
-//    public static void setNextId(int nextId) {
-//        Job.nextId = nextId;
-//    }
-
     public String getName() {
         return name;
     }

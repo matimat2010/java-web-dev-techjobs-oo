@@ -112,7 +112,7 @@ public class Job {
 
     @Override
     public String toString() {
-        if(name == null){
+        if(name == ""){
             name = "Data not available";
 
         }if(employer.getValue().equals("")){

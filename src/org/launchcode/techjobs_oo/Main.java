@@ -17,9 +17,6 @@ public class Main {
         for (Job job : jobs){
             System.out.println(job);
         }
-//        Job test_job_1 = new Job( "Yo", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-//        Job test_Job_3 = new Job();
-//        System.out.println(test_job_1);
 
     }
 

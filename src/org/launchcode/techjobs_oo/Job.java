@@ -19,12 +19,13 @@ public class Job {
 
 
     public Job(){
-        this.nextId;
+        this.id=nextId;
         nextId++;
     }
 
     public Job( String name, Employer employer, Location location, PositionType positionType, CoreCompetency coreCompetency) {
-        //this.id = id;
+        this.id=nextId;
+        nextId++;
         this.name = name;
         this.employer = employer;
         this.location = location;
@@ -107,5 +108,29 @@ public class Job {
 
     public void setCoreCompetency(CoreCompetency coreCompetency) {
         this.coreCompetency = coreCompetency;
+    }
+
+    @Override
+    public String toString() {
+        if(name == null){
+            name = "Data not available";
+        }if(employer == null){
+            this.employer = new Employer("Data not available");
+        }if(location == null){
+            this.location = new Location("Data not available");
+        }if(positionType == null) {
+            this.positionType = new PositionType("Data not available");
+        }if(coreCompetency == null) {
+            this.coreCompetency = new CoreCompetency("Data not available");
+        }
+
+        return "\n"  +
+                "ID: " + id + '\n' +
+                "Name: " + name + '\n' +
+                "Employer: " + employer + '\n' +
+                "Location: " + location + '\n' +
+                "PositionType: " + positionType.getValue() + '\n' +
+                "CoreCompetency: " + coreCompetency + '\n' +
+                "\n" ;
     }
 }

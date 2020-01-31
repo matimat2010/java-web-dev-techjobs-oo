@@ -23,7 +23,7 @@ public class JobTest {
     public void createJobObject() {
         test_job_1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         test_job_2 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-        test_job_3 = new Job();
+        test_job_3 = new Job("Product tester", new Employer(""), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
     }
 
     @Test
@@ -70,9 +70,7 @@ public class JobTest {
     @Test
     public void dataNotAvailableIfaFieldIsEmpty(){
         assertTrue (test_job_3.toString().contains("Employer: Data not available"));
-        assertTrue (test_job_3.toString().contains("Location: Data not available"));
-        assertTrue (test_job_3.toString().contains("PositionType: Data not available"));
-        assertTrue (test_job_3.toString().contains("CoreCompetency: Data not available"));
+
     }
 
 

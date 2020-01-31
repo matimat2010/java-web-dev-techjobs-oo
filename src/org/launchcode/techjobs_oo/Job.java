@@ -114,23 +114,27 @@ public class Job {
     public String toString() {
         if(name == null){
             name = "Data not available";
-        }if(employer == null){
+
+        }if(employer.getValue().equals("")){
             this.employer = new Employer("Data not available");
-        }if(location == null){
+
+        }if(location.getValue().equals("")){
             this.location = new Location("Data not available");
-        }if(positionType == null) {
+
+        }if(positionType.getValue().equals("")) {
             this.positionType = new PositionType("Data not available");
-        }if(coreCompetency == null) {
+
+        }if(coreCompetency.getValue().equals("")) {
             this.coreCompetency = new CoreCompetency("Data not available");
         }
 
         return "\n"  +
                 "ID: " + id + '\n' +
                 "Name: " + name + '\n' +
-                "Employer: " + employer + '\n' +
-                "Location: " + location + '\n' +
+                "Employer: " + employer.getValue() + '\n' +
+                "Location: " + location.getValue() + '\n' +
                 "PositionType: " + positionType.getValue() + '\n' +
-                "CoreCompetency: " + coreCompetency + '\n' +
+                "CoreCompetency: " + coreCompetency.getValue() + '\n' +
                 "\n" ;
     }
 }
